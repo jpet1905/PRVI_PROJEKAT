@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRVI PROJEKAT</title>
+    <!-- favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <!-- prikaz konacnog rezultata/stanja -->
+    <div class="wrapper">
+        <div id="prvi">
+            <p>Dostupan budzet u Novembru 2019 je:</p><br>
+            <p id="stanje"></p><br>
+            <div class="zeleni">
+                <div class="drzi_sirinu">
+                    <div>PRIHOD</div>
+                    <div id="prihodovanje"></div>
+                </div>
+            </div>
+            <div class="crveni">
+                <div class="drzi_sirinu">
+                    <div>RASHOD</div>
+                    <div id="rashodovanje"></div>
+                </div>
+                <div id="procentualni"></div>
+            </div>
+        </div>
+    </div>
+    <div id="drugi">
+        <div>
+            <form>
+                <select id="select">
+                    <option value="0" selected="selected" disabled>Kategorija</option>
+                    <option id="select_prihod" value="prihod">Prihod</option>
+                    <option id="select_rashod" value="rashod">Rashod</option>
+                </select>
+                <input id="text" type="text" placeholder="Opis">
+                <!--mora da je text jer type="number" ne prima decimalne brojeve-->
+                <input id="number" type="text" placeholder="Iznos">
+                <button type="submit"><i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+        <div id="error"></div>
+    </div>
+    <div id="treci">
+        <div id="stavka_prihoda">
+            <h3>PRIHODI</h3>
+            <span class="underscored"></span>
+        </div>
+        <div id="stavka_rashoda">
+            <h3>RASHODI</h3>
+            <span class="underscored"></span>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

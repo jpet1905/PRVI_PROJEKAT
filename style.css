@@ -1,0 +1,195 @@
+:root {
+    --color-lwhite:rgb(255, 255, 255, 0.2);
+    --color-white:rgb(255, 255, 255);
+    --color-ltomato:rgb(255, 99, 71, 0.5);
+    --color-tomato:rgb(255, 99, 71);
+    --color-red:rgb(255, 0, 0);
+    --color-teal:rgb(0, 128, 128);
+    --color-lgrey:rgb(199, 193, 193);
+    --color-blue:rgb(71, 102, 126);
+    --color-dgrey:rgb(199, 193, 193, 0.3);
+    --color-lblack:rgb(0, 0, 0, 0.4);
+    --color-black:rgb(0, 0, 0);
+    --basic-time: .3s;
+    --main-fontsize: 1.2em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+.wrapper{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, var(--color-lgrey), var(--color-blue)); 
+    font-size: var(--main-fontsize);
+}
+
+#prvi {
+    width: 400px;
+    color: var(--color-white);
+}
+#prvi>p {
+    text-align: center;
+    text-shadow: 2px 2px 2px var(--color-black);
+}
+#stanje {
+    font-size: 3em;
+}
+.zeleni, .crveni, select, input {
+    height: 50px;
+}
+.zeleni, .crveni {
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 4px 4px 3px 2px var(--color-lblack);
+}
+.zeleni {
+    background-color: var(--color-teal);
+    padding-bottom: 0px;
+}
+.zeleni>.drzi_sirinu {
+    margin-top: 5px;
+}
+.crveni {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-tomato);
+}
+.drzi_sirinu {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drzi_sirinu>div:first-child {
+    color: var(--color-black);
+}
+#procentualni {
+    padding: 5px;
+    background-color: var(--color-lwhite);
+    font-size: 0.75em;
+    color: var(--color-white);
+    text-align: center;
+}
+/* drugi odeljak */
+#drugi {
+    padding: 20px 0;
+    background-color: var(--color-dgrey);
+}
+#drugi>div:first-child {
+    display: flex;
+    justify-content: center;
+}
+input, select {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: var(--main-fontsize);
+}
+select {
+    background-color: var(--color-white);
+}
+#select_prihod {
+    background-color: var(--color-teal);
+}
+#select_rashod {
+    background-color: var(--color-tomato);
+}
+input:focus {
+    outline-style: none;
+    outline:2px solid var(--color-teal);
+    box-shadow: 4px 4px 3px 2px var(--color-lblack);
+    color: var(--color-teal);
+}
+#text {
+    width: 300px;
+    transition: width var(--basic-time) ease-out;
+}
+#text:focus {
+    width: 500px; 
+}
+#number, select {
+    width: 150px;
+}
+button[type=submit] {
+    width: 50px;
+    height: 50px;
+    border-color: var(--color-red);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--basic-time);
+}
+button[type=submit]:hover {
+    background-color: var(--color-lgrey);
+}
+button[type=submit]:active {
+    border-color: var(--color-teal);
+    background-color: var(--color-teal); 
+}
+button[type=submit] i {
+color: var(--color-red);
+}
+.errorstyle {
+    width: 100%;
+    color: var(--color-red);
+    font-size: var(--main-fontsize);
+    text-align: center;
+}
+/* treci odeljak */
+#treci {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center;
+    align-content: center; */
+    padding: 50px;
+}
+#stavka_prihoda, #stavka_rashoda {
+    width: 500px;
+    text-align: left;
+} 
+#stavka_prihoda h3 {
+    margin-bottom: 10px;
+    font-size: var(--main-fontsize);
+    color: var(--color-teal);
+}
+
+#stavka_rashoda h3{
+    margin-bottom: 10px;
+    font-size: var(--main-fontsize);
+    color: var(--color-tomato);
+}
+/* za span u vidu sive linije */
+.underscored {
+    border-bottom: 1px solid var(--color-lgrey);
+    display: block;
+    width: 100%; /*mora da bi iznos stajao na kraju prvog reda*/
+}
+.ispis {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--main-fontsize);
+}
+.ispis>div {
+    height: 50px;
+    padding: 10px;
+}
+.dugme {
+    padding: 5px;
+    color: var(--color-white);
+}
+.procentualni_box {
+    width: 56px;
+}
+.procentualni_box>div {
+    padding: 5px;
+    background-color: var(--color-ltomato); 
+    font-size: 0.75em;
+    color: var(--color-tomato); 
+
+}
